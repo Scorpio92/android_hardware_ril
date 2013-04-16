@@ -2,6 +2,8 @@
 
 # XXX using libutils for simulator build only...
 #
+
+ifneq ($(BOARD_NO_REFERENCE_RIL), true)
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -51,3 +53,4 @@ else
   LOCAL_MODULE:= reference-ril
   include $(BUILD_EXECUTABLE)
 endif
+endif # BOARD_NO_REFERENCE_RIL

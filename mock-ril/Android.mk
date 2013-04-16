@@ -2,6 +2,8 @@
 #
 # not currently building V8 for x86 targets
 
+ifneq ($(BOARD_NO_MOCK_RIL), true)
+
 LOCAL_PATH:= $(call my-dir)
 
 # Directories of source files
@@ -81,3 +83,4 @@ src_java :=
 src_py :=
 src_js :=
 src_proto :=
+endif # BOARD_NO_MOCK_RIL
